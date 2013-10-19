@@ -13,6 +13,12 @@ Define the `WP_UPLOAD_DIR`, `WP_UPLOAD_URL`, and `WP_THEME_DIR` constants
 in your `wp-config.php` file to override the upload directory, upload URL
 and theme directory respectively.
 
+Example:
+
+    define( 'WP_UPLOAD_DIR', 'stuff' );
+    define( 'WP_UPLOAD_URL', 'http://example.com/stuff' );
+    define( 'WP_THEME_DIR',  'skin' );
+
 ## Background ##
 
 WordPress does not have a `WP_UPLOAD_DIR` constant. The `UPLOADS` constant
