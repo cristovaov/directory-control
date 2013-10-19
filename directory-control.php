@@ -7,6 +7,30 @@ Author:       John Blackbourn
 Author URI:   https://johnblackbourn.com/
 Network:      true
 
+## Usage ##
+
+Define the `WP_UPLOAD_DIR`, `WP_UPLOAD_URL`, and `WP_THEME_DIR` constants
+in your `wp-config.php` file to override the upload directory, upload URL
+and theme directory respectively.
+
+## Background ##
+
+WordPress does not have a `WP_UPLOAD_DIR` constant. The `UPLOADS` constant
+does not perform as expected and is always prepended with `ABSPATH`,
+meaning it is impossible to use a root directory for uploads if WordPress
+is installed in its own directory. This plugin fixes that by introducing
+`WP_UPLOAD_DIR` and `WP_UPLOAD_URL` constants. Define these constants in
+your `wp-config.php` file and their value will override the default upload
+directory.
+
+WordPress does not have a `WP_THEME_DIR` constant. Themes can only be
+present in `WP_CONTENT_DIR/themes`. This plugin fixes that by introducing
+`WP_THEME_DIR` and `WP_THEME_URL` constants. Define these constants in
+your `wp-config.php` file and their value will override the default theme
+directory.
+
+## License ##
+
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
@@ -19,25 +43,7 @@ GNU General Public License for more details.
 
 ---
 
-The Directory Control plugin was originally commissioned by Daft Media for TheJournal.ie
-
----
-
-Usage:      Define the WP_UPLOAD_DIR, WP_UPLOAD_URL, and WP_THEME_DIR constants in
-            your wp-config.php file to override the upload directory, upload URL and
-            theme directory respectively.
-
-Background: WordPress does not have a WP_UPLOAD_DIR constant. The UPLOADS constant
-            does not perform as expected and is always prepended with ABSPATH, meaning
-			it is impossible to use a root directory for uploads if WordPress is
-			installed in its own directory. This plugin fixes that by introducing
-			WP_UPLOAD_DIR and WP_UPLOAD_URL constants. Define these constants in your
-			wp-config file and their value will override the default upload directory.
-
-            WordPress does not have a WP_THEME_DIR constant. Themes can only be present
-			in WP_CONTENT_DIR/themes. This plugin fixes that by introducing
-			WP_THEME_DIR and WP_THEME_URL constants. Define these constants in your
-			wp-config file and their value will override the default theme directory.
+This plugin was originally commissioned by Daft Media for TheJournal.ie
 
 */
 
